@@ -1,2 +1,35 @@
 <h1>家計簿を登録する<h2>
 
+<%= form_with model: @expense, local: true do |f| %>
+
+<div>品物</div>
+  <%= f.text_area :name, class:"expense-text", id:"expense-name", placeholder:"購入した物（必須 40文字まで)", maxlength:"40" %>
+
+<div>金額</div>
+<span class="sell-yen">¥</span>
+  <%= f.text_field :price, class:"price-input", id:"expense-price", placeholder:"例）300" %>
+
+
+<div>購入場所</div>
+  <%= f.text_area :name, class:"expense-text", id:"expense-wheretobuy", placeholder:"購入した場所（必須 40文字まで)", maxlength:"40" %>
+
+<div>項目</div>
+
+  
+
+<div>支払い方法</div>
+
+<div>メモ</div>
+<%= f.text_area :explation, class:"expense-text", id:"expense-memo" %>
+ 
+
+
+
+
+
+
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+<% end %>
