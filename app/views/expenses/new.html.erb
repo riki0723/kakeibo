@@ -16,9 +16,8 @@
 <div>項目</div>
 <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"expense-category"}) %>
 
-  
-
 <div>支払い方法</div>
+
 
 <div>メモ</div>
 <%= f.text_area :explation, class:"expense-text", id:"expense-memo" %>
