@@ -1,8 +1,12 @@
 class Expense < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :category
+
+
   belongs_to :user
 
 
-  validates :name, :price, :wheretobuy, :category_id, :payment_id, presence: true
+  validates :name, :price, :wheretobuy, :category, :payment, presence: true
   validates :category_id, :payment_id, numericality: { other_than: 1 } 
 
 
