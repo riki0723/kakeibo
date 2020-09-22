@@ -9,5 +9,5 @@ class Category < ActiveHash::Base
     { id: 7, name: '趣味、遊び' },
     { id: 8, name: '嗜好品' },
     { id: 9, name: 'その他' },
-
+  ]
 end
