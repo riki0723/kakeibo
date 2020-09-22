@@ -13,6 +13,13 @@
 ActiveRecord::Schema.define(version: 2020_09_17_131443) do
 
   create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "wheretobuy"
+    t.integer "category_id"
+    t.integer "payment_id"
+    t.text "memo"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
