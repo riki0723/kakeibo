@@ -2,6 +2,11 @@
 
 <%= form_with model: @expense, local: true do |f| %>
 
+<div>支払日</div>
+
+<%= f.date_select :date, id:"expense-date" %>
+
+
 <div>品物</div>
   <%= f.text_area :name, class:"expense-text", id:"expense-name", placeholder:"購入した物（必須 40文字まで)", maxlength:"40" %>
 
@@ -11,7 +16,7 @@
 
 
 <div>購入場所</div>
-  <%= f.text_area :name, class:"expense-text", id:"expense-wheretobuy", placeholder:"購入した場所（必須 40文字まで)", maxlength:"40" %>
+  <%= f.text_area :wheretobuy, class:"expense-text", id:"expense-wheretobuy", placeholder:"購入した場所（必須 40文字まで)", maxlength:"40" %>
 
 <div>項目</div>
 <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"expense-category"}) %>
