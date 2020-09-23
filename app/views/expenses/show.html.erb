@@ -22,5 +22,7 @@
 <div>メモ</div>
 <%=@expense.memo %>
 
+
+<%= link_to '内容の編集', edit_expense_path {expense.id}, method: :get, class: "expense-red-btn" %>
 <%= link_to '削除', expense_path {expense.id}, method: :delete, class:'expense-destroy' %>
 
