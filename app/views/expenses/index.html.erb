@@ -34,6 +34,7 @@
     <% @expenses.each do |expense| %>
       <tr>
        <%= link_to "詳細", class: "post" %>
+       
         <td><%= expense.day.strftime("%m/%d") %></td>
         <td><%= expense.name %></td>
         <td>¥<%= expense.price %></td>
