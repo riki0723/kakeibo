@@ -22,7 +22,28 @@
 <%= month_calendar  do |date| %>
   
   <%= date.day %>
-  <div>収入</div>
-  <div>支出</div>
-  <div>合計</div>
+  <div>支出額</div>
+
 <% end %>
+
+
+<h2>リスト</h2>
+
+
+
+    <% @expenses.each do |expense| %>
+      <tr>
+       <%= link_to "詳細", class: "post" %>
+        <td><%= expense.day.strftime("%m/%d") %></td>
+        <td><%= expense.name %></td>
+        <td>¥<%= expense.price %></td>
+        <td><%= expense.wheretobuy %></td>
+        <td><%= expense.category.name %></td>
+        <td><%= expense.payment.name %></td>
+
+
+
+
+
+      </tr>
+    <% end %>
