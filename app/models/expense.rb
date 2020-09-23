@@ -7,7 +7,7 @@ class Expense < ApplicationRecord
   belongs_to :user
 
 
-  validates :name, :price, :wheretobuy, :category, :payment, presence: true
+  validates :day, :name, :price, :wheretobuy, :category, :payment, presence: true
   validates :category_id, :payment_id, numericality: { other_than: 1 } 
 
 
