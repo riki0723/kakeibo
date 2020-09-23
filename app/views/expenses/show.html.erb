@@ -1,1 +1,24 @@
+<h1>詳細表示</h1>
+
+<div>名前</div>
 <%= @expense.name %>
+
+<div>支払日</div>
+<%=@expense.day %>
+
+<div>支払場所</div>
+<%=@expense.wheretobuy %>
+
+<div>支払金額</div>
+<%=@expense.price %>
+
+<div>支払い方法</div>
+<%=@expense.payment.name %>
+
+
+<div>項目</div>
+<%=@expense.category.name %>
+
+<div>メモ</div>
+<%=@expense.memo %>
+
