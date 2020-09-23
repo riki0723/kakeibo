@@ -13,6 +13,12 @@ class ExpensesController < ApplicationController
     Expense.create(expense_params)
   end
 
+  def destroy
+    @expense = Expense.find(params[:id])
+    @expense.destroy
+    redirect_to root_path
+  end
+
   def show
     @expense = Expense.find(params[:id])
   end
