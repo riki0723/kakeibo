@@ -35,7 +35,7 @@ class ExpensesController < ApplicationController
 
   private
   def expense_params
-    params.require(:expense).permit(:day, :name, :price, :wheretobuy, :category_id, :payment_id, :memo).merge(user_id: current_user.id)
+    params.require(:expense).permit(:start_time, :name, :price, :wheretobuy, :category_id, :payment_id, :memo).merge(user_id: current_user.id)
   end
 
 end
