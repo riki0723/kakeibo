@@ -1,24 +1,44 @@
 # README
+# アプリ名
+家計簿アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+このアプリでは普段利用者はどのくらい出費しているのか記録、目視出来るアプリになっています。
 
-Things you may want to cover:
 
-* Ruby version
+# 制作背景
+普段の生活で気付いたら貯金しようと思っていたが
+いつの間にかお金を多く使ってしまいお金がない事ありませんか？
+そのような事を解決する為普段の出費を理解する為に開発を決めました。
+# 実装予定内容
 
-* System dependencies
+# DB設計
 
-* Configuration
+## users テーブル
 
-* Database creation
+| Column     | Type   | Options     |
+| ---------- | ------ | ----------- |
+| name       | string | null: false |
+| nickname   | string | null: false |
+| email      | string | null: false |
+| password   | string | null: false |
+| berthday   | date   | null: false |
+### Association
+- has_many :items
 
-* Database initialization
+## expenses テーブル
 
-* How to run the test suite
+| Column      | Type       | Options                        |
+| ----------  | ---------- | ------------------------------ |
+| name        | string     | null: false                    |
+| price       | string     | null: false                    |
+| payment_id  | integer    | null: false                    |
+| category_id | integer    | null: false                    |
+| wheretobuy  | string     | null: false                    |
+| delivery    | integer    | null: false                    |
+| start_time  | date       | null: false                    |
+| memo        | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user
