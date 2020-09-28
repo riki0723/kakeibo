@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_131443) do
   create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "start_time"
     t.string "name"
-    t.string "price"
+    t.integer "price"
     t.string "wheretobuy"
     t.integer "category_id"
     t.integer "payment_id"

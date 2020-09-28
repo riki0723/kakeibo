@@ -4,7 +4,7 @@ class CreateExpenses < ActiveRecord::Migration[6.0]
 
       t.date :start_time
       t.string :name
-      t.string :price
+      t.integer :price
       t.string :wheretobuy
       t.integer :category_id
       t.integer :payment_id
