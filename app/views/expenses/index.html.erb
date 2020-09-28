@@ -22,12 +22,15 @@
 <%= month_calendar events: @expenses do |date, expenses| %>
   
   <%= date.day %>
-  <div>支出額</div>
-   <% expenses.each do |expense| %>
-    <div>
-      <%= expense.price %>
+  
+  <% if Expense.where(start_time: date).sum(:price) > 0%>
+
+    <div>支出額は
+      <%= Expense.where(start_time: date).sum(:price) %>円です
     </div>
+
   <% end %>
+ 
 
 <% end %>
 
