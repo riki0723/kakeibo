@@ -23,9 +23,11 @@
 .main-header {
   height: 80px;
   padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 .top-screen {
   background-color: yellow;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   padding: 20px 30px;
 }
