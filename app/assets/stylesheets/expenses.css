@@ -10,9 +10,9 @@
   height: 80px;
   padding: 20px 25px;
 }
-.link-list {
+.link-lists {
     background-color: green;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     padding: 20px 25px;
   }
 
