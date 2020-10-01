@@ -21,4 +21,44 @@
 </div>
 
 <div class="top-screen">
+
+  <div class="top-top">
+    <h2>トップページ</h2>
+      <div>出費を管理するアプリです</div>
+  </div>
+
+  <div class="top-calender">
+    <h2>カレンダー</h2>
+       <%= month_calendar events: @expenses do |date, expenses| %>
+          <%= date.day %>
+  
+           <% if Expense.where(start_time: date).sum(:price) > 0%>
+
+            <div>支出額は
+               <%= Expense.where(start_time: date).sum(:price) %>円です
+            </div>
+
+           <% end %>
+ 
+        <% end %>
+   </div>
+
+
+   <div class="top-list">
+    <h2>出費履歴</h2>
+      <% @expenses.each do |expense| %>
+      <tr>
+       <%= link_to "詳細", expense_path(expense.id), class: "post" %>
+       
+        <td><%= expense.start_time.strftime("%m/%d") %></td>
+        <td><%= expense.name %></td>
+        <td>¥<%= expense.price %></td>
+        <td><%= expense.wheretobuy %></td>
+        <td><%= expense.category.name %></td>
+        <td><%= expense.payment.name %></td>
+      </tr>
+    <% end %>
+   </div>
+
+
 </div>
