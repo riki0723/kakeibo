@@ -4,6 +4,7 @@
      <div class="main-header-title">
 
         <div class="show-lists hidden" id="pull-down-calendar">カレンダー</div>
+        <div class="show-lists hidden" id="pull-down-rireki">出費履歴</div>
 
       </div>
   </div>
@@ -48,7 +49,7 @@
    </div>
 
 
-   <div class="top-list">
+   <div class="top-list hidden" id="show-top-list">
     <h2>出費履歴</h2>
       <% @expenses.each do |expense| %>
       <tr>
