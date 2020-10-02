@@ -31,3 +31,9 @@
   height: calc(100vh - 80px);
   padding: 20px 30px;
 }
+
+
+
+.hidden{
+  display: none;
+}

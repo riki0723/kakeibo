@@ -1,7 +1,11 @@
 <div class="main-header">
  
   <div class="left-header">
-     <div class="main-header-title">タイトル</div>
+     <div class="main-header-title">
+
+        <div class="show-lists hidden" id="pull-down-calendar">カレンダー</div>
+
+      </div>
   </div>
 
   <div class="right-header">
@@ -27,7 +31,7 @@
       <div>出費を管理するアプリです</div>
   </div>
 
-  <div class="top-calender">
+  <div class="top-calender hidden" id="show-top-calender">
     <h2>カレンダー</h2>
        <%= month_calendar events: @expenses do |date, expenses| %>
           <%= date.day %>
