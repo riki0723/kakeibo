@@ -26,6 +26,30 @@
 
 
 
+  <table>
+
+  <thead>
+  <div>最新の履歴</div>
+    <tr>
+      <th>日付</th>
+      <th>金額</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.last(5).each do |expense| %>
+      <tr>
+        <td><%= expense.start_time.strftime("%m/%d") %></td>
+        <td>¥<%= expense.price %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+
+
 
   
 </div>
