@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: greenyellow;
+  width: 200px;
+  height: 100vh;
+}
+.side-bar-header {
+  height: 80px;
+  padding: 20px 25px;
+}
+.link-lists {
+    background-color: green;
+    height: calc(100vh - 80px);
+    padding: 20px 25px;
+  }
+
+.main-top {
+  background-color: gold;
+  width: calc(100% - 200px);
+}
+.main-header {
+  height: 80px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-screen {
+  background-color: yellow;
+  height: calc(100vh - 80px);
+  padding: 20px 30px;
+}
+
+
+
+.hidden{
+  display: none;
+}
