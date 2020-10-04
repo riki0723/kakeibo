@@ -2,19 +2,55 @@
   display: flex;
 }
 .side-bar {
-  background-color: greenyellow;
   width: 200px;
   height: 100vh;
 }
 .side-bar-header {
   height: 80px;
-  padding: 20px 25px;
+  padding: 23px 40px;
+  background-color: gold;
+  border-radius: 15px;
+  margin : 1px ;
+  border : 1px solid yellow ;
+  
 }
 .link-lists {
-    background-color: green;
     height: calc(100vh - 80px);
-    padding: 20px 25px;
+    padding: 20px 10px;
+    background-color: gold;
+    border-radius: 25px;
+    border : 1px solid yellow ;
+    
   }
+
+
+  .show {
+    font-size: 20px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    padding :  20px ;
+    justify-content: center
+    
+  }
+
+  .list-name{
+    font-size: 20px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    padding :  20px ;
+    justify-content: center
+
+  }
+
+  .sideber-chokin-list{
+    border: solid 1px #000000; border-collapse: collapse;
+  }
+
+  .sideber-chokin{
+    border: solid 1px #000000; border-collapse: collapse;
+  }
+
+  
 
 .main-top {
   background-color: gold;
