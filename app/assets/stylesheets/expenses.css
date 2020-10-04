@@ -55,6 +55,9 @@
 .main-top {
   background-color: gold;
   width: calc(100% - 200px);
+  border-radius: 15px;
+  margin : 1px ;
+  border : 1px solid yellow ;
 }
 .main-header {
   height: 80px;
@@ -62,8 +65,19 @@
   display: flex;
   justify-content: space-between;
 }
+
+.main-header-title {
+  font-size: 25px;
+  margin : 0px 40px;
+
+}
+
+.right-header{
+  margin : 0px 40px;
+}
+
 .top-screen {
-  background-color: yellow;
+  background-color: #FFFFE0;
   height: calc(100vh - 80px);
   padding: 20px 30px;
 }
