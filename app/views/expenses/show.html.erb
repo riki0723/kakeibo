@@ -1,28 +1,37 @@
-<h1>詳細表示</h1>
+<div class="show-expense">
+  <div class="show-expense-form">
 
-<div>名前</div>
-<%= @expense.name %>
+    <div class="show-expense-top">
+      詳細表示
+    </div>
 
-<div>支払日</div>
-<%=@expense.start_time %>
+    <div class="show-expense-body">
+      <div class="show-expense-body-name">名前</div>
+      <%= @expense.name %>
 
-<div>支払場所</div>
-<%=@expense.wheretobuy %>
+      <div class="show-expense-body-name">支払日</div>
+      <%=@expense.start_time %>
 
-<div>支払金額</div>
-<%=@expense.price %>
+      <div class="show-expense-body-name">支払場所</div>
+      <%=@expense.wheretobuy %>
 
-<div>支払い方法</div>
-<%=@expense.payment.name %>
+      <div class="show-expense-body-name">支払金額</div>
+      ¥<%=@expense.price %>
+
+      <div class="show-expense-body-name">支払い方法</div>
+      <%=@expense.payment.name %>
+
+      <div class="show-expense-body-name">項目</div>
+      <%=@expense.category.name %>
+
+      <div class="show-expense-body-name">メモ</div>
+      <%=@expense.memo %>
 
 
-<div>項目</div>
-<%=@expense.category.name %>
-
-<div>メモ</div>
-<%=@expense.memo %>
-
-
-<%= link_to '内容の編集', edit_expense_path {expense.id}, method: :get, class: "expense-red-btn" %>
-<%= link_to '削除', expense_path {expense.id}, method: :delete, class:'expense-destroy' %>
-
+      <div class="sell-btn-contents">
+        <%= link_to '内容の編集', edit_expense_path {expense.id}, method: :get, class: "expense-red-btn" %>
+        <%= link_to '削除', expense_path {expense.id}, method: :delete, class:'expense-destroy' %>
+      </div>
+    </div>
+  </div>
+</div>
