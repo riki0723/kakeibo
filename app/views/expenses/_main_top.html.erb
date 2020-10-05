@@ -28,12 +28,11 @@
 <div class="top-screen">
 
   <div class="top-top" id="show-top-top">
-    <h2>トップページ</h2>
+    <h1>トップページ</h1>
       <div>出費を管理するアプリです</div>
   </div>
 
   <div class="top-calender hidden" id="show-top-calender">
-    <h2>カレンダー</h2>
        <%= month_calendar events: @expenses do |date, expenses| %>
           <%= date.day %>
   
@@ -51,7 +50,7 @@
 
   <div class="top-list hidden" id="show-top-list">
 
-      <table>
+      <table class="top-list-table">
           <thead>
               <tr>
                  <th>詳細</th>
