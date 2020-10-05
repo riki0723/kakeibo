@@ -119,7 +119,7 @@ td{
   border: double 1px #000000; 
 }
 
-
+/* 支出の新規登録 */
 .new-expense {
   display: flex;
   width: 100%;
@@ -199,6 +199,42 @@ td{
   font-size: 20px;
   margin-top: 8px;
 }
+
+/* 出費の変更 */
+.edit-expense {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.edit-expense-form {
+  top: 40px;
+  margin: 50px;
+}
+
+.edit-expense-top {
+  background-color: gold;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.edit-expense-body {
+  width: 600px;
+  border-radius: 20px;
+  background-color: gold;
+  margin: 5px;
+  padding: 30px;
+}
+
+.edit-expense-body-name {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
 
 
 .hidden{
