@@ -75,6 +75,7 @@
               <td><%= expense.payment.name %></td>
              </tr>
           <% end %>
+          <%= paginate @expenses %>
           </tbody>
       </table>
 
