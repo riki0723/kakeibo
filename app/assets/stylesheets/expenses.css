@@ -234,7 +234,15 @@ td{
   font-size: 20px;
   margin-top: 8px;
 }
+/* kaminariのcss */
+.pagination {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  
 
+  
+}
 
 
 .hidden{
