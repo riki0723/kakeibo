@@ -49,26 +49,29 @@
 
 
   <div class="top-list hidden" id="show-top-list">
-
-      <%= search_form_for @q do |f| %>
-      <%= f.label :name, "Keyword" %>
-       <%= f.search_field :name_cont %>
-
-       <%= f.label :start_time %>
-      <%= f.date_select :start_time_gteq %>
-      <%= f.date_select :start_time_lt %>
-
-
-
-        <%= f.submit "検索" %>
-
+    
+      <div class="search_list">
+        <%= search_form_for @q do |f| %>
+        <div class="search_keyworrd">
+           <%= f.label :name, "Keyword" %>
+           <%= f.search_field :name_cont %>
+        </div>
+        <div class="search_date">
+            <%= f.label :start_time,"日付" %>
+            <%= f.date_select :start_time_gteq %>日〜
+            <%= f.date_select :start_time_lt %>日
+        </div>
+        <div class="seach" id="seach">
+            <%= f.submit "検索" %>
+        </div>
+      </div>
 
       <table class="top-list-table">
           <thead>
               <tr>
                  <th>詳細</th>
-                 <th>日付</th>
-                 <th>名前</th>
+                 <th><%= sort_link(@q, :start_time, "日付") %></th>
+                 <th><%= sort_link(@q, :name, "名前") %></th>
                  <th>金額</th>
                  <th>購入場所</th>
                  <th>カテゴリー</th>
