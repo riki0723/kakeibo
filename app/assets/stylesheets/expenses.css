@@ -99,9 +99,9 @@
   height: 300px;
   border-radius: 25px;
 
-}
+} 
 
-tr{
+ tr{
   padding: 10px;
   border: double 1px #000000; 
   
@@ -117,7 +117,7 @@ th{
 td{
   padding: 5px 10px;
   border: double 1px #000000; 
-}
+} 
 
 /* 支出の新規登録 */
 .new-expense {

@@ -50,6 +50,19 @@
 
   <div class="top-list hidden" id="show-top-list">
 
+      <%= search_form_for @q do |f| %>
+      <%= f.label :name, "Keyword" %>
+       <%= f.search_field :name_cont %>
+
+       <%= f.label :start_time %>
+      <%= f.date_select :start_time_gteq %>
+      <%= f.date_select :start_time_lt %>
+
+
+
+        <%= f.submit "検索" %>
+
+
       <table class="top-list-table">
           <thead>
               <tr>
@@ -74,10 +87,13 @@
               <td><%= expense.category.name %></td>
               <td><%= expense.payment.name %></td>
              </tr>
+             <% end %>
           <% end %>
-          <%= paginate @expenses %>
+           
           </tbody>
       </table>
+      <%= paginate @expenses %> 
+      <%=link_to 'リセット', root_path, class:"back-btn" %>
 
   </div>
 
