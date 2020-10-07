@@ -2,23 +2,57 @@
   display: flex;
 }
 .side-bar {
-  background-color: greenyellow;
   width: 200px;
   height: 100vh;
 }
 .side-bar-header {
   height: 80px;
-  padding: 20px 25px;
+  padding: 23px 40px;
+  background-color: gold;
+  border-radius: 15px;
+  margin : 1px ;
+  border : 1px solid yellow ;
+  
 }
 .link-lists {
-    background-color: green;
     height: calc(100vh - 80px);
-    padding: 20px 25px;
+    padding: 20px 10px;
+    background-color: gold;
+    border-radius: 25px;
+    border : 1px solid yellow ;
+    
   }
+
+
+  .show {
+    font-size: 20px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    padding :  20px ;
+    justify-content: center
+    
+  }
+
+  .list-name{
+    font-size: 20px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    padding :  20px ;
+    justify-content: center
+
+  }
+
+
+
+  
 
 .main-top {
   background-color: gold;
   width: calc(100% - 200px);
+  border-radius: 15px;
+  margin : 1px ;
+  border : 1px solid yellow ;
+  height: calc(100vh - 80px);
 }
 .main-header {
   height: 80px;
@@ -26,12 +60,210 @@
   display: flex;
   justify-content: space-between;
 }
+
+.main-header-title {
+  font-size: 25px;
+  margin : 0px 40px;
+
+}
+
+.right-header{
+  margin : 0px 40px;
+}
+
 .top-screen {
-  background-color: yellow;
+  background-color: #FFFFE0;
   height: calc(100vh - 80px);
   padding: 20px 30px;
 }
 
+h1 {
+  margin: 10px 0 0px 30px;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 10px 0 20px 30px;
+}
+
+.info {
+  font-size: 15px;
+  margin: 10px 0 40px 30px;
+}
+
+.top-calender{
+  margin : 60px 30px 60px 80px;
+  width: calc(100% - 200px);
+
+}
+
+.top-list {
+  width: calc(100% - 200px);
+  margin : 60px 30px 60px 80px;
+  height: 100vh - 80px;
+}
+
+.top-list-table {
+  width: calc(100% - 10px);
+  border: double 1px #000000; 
+  height: 300px;
+  border-radius: 25px;
+} 
+
+.search_list {
+  text-align: center;
+  background-color: gold;
+  margin : 20px 30px 20px 30px;
+  height: 85px;
+  width: 500px;
+  border-radius: 20px;
+  
+  
+}
+
+ tr{
+  padding: 20px;
+  border: double 1px #000000; 
+  
+} 
+
+th{
+  background-color: gold;
+  padding: 5px 10px;
+  border: double 1px #000000; 
+  
+} 
+
+td{
+  padding: 5px 10px;
+  border: double 1px #000000; 
+} 
+
+/* 支出の新規登録 */
+.new-expense {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.new-expense-form {
+  top: 40px;
+  margin: 50px;
+}
+
+.new-expense-top {
+  background-color: gold;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.new-expense-body {
+  width: 600px;
+  border-radius: 20px;
+  background-color: gold;
+  margin: 5px;
+  padding: 30px;
+}
+
+.new-expense-body-name {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.expense-text {
+  width: 300px;
+}
+
+.price-input {
+  width: 300px;
+}
+
+.select-box {
+  width: 300px;
+}
+/* 出費内容の詳細 */
+.show-expense{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.show-expense-form{
+  top: 40px;
+  margin: 50px;
+}
+
+.show-expense-top {
+  background-color: gold;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.show-expense-body {
+  width: 600px;
+  border-radius: 20px;
+  background-color: gold;
+  margin: 5px;
+  padding: 30px;
+}
+
+.show-expense-body-name{
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+/* 出費の変更 */
+.edit-expense {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.edit-expense-form {
+  top: 40px;
+  margin: 50px;
+}
+
+.edit-expense-top {
+  background-color: gold;
+  font-size: 30px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.edit-expense-body {
+  width: 600px;
+  border-radius: 20px;
+  background-color: gold;
+  margin: 5px;
+  padding: 30px;
+}
+
+.edit-expense-body-name {
+  font-size: 20px;
+  margin-top: 8px;
+}
+/* kaminariのcss */
+.pagination {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  
+
+  
+}
 
 
 .hidden{

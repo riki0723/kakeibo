@@ -17,7 +17,7 @@
        </div>
     <% else %>
         <div class="grid-6">
-          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
        </div>
     <% end %>
@@ -28,12 +28,18 @@
 <div class="top-screen">
 
   <div class="top-top" id="show-top-top">
-    <h2>トップページ</h2>
-      <div>出費を管理するアプリです</div>
+    <h1>トップページ</h1>
+      <div class="info">自分がどのくらい出費しているかを確認できるアプリです！自分の出費を確認しましょう！</div>
+    <h1>機能について</h1>
+      <h2>カレンダー</h2>
+        <div class="info">カレンダーで日付事の出費を確認できます</div>
+      <h2>出費履歴</h2>
+        <div class="info">日付の絞り込みなどにより出費の履歴を確認できます</div>
+      <h2>新規入力</h2>
+        <div class="info">出費の新規入力ができます</div>
   </div>
 
   <div class="top-calender hidden" id="show-top-calender">
-    <h2>カレンダー</h2>
        <%= month_calendar events: @expenses do |date, expenses| %>
           <%= date.day %>
   
@@ -50,13 +56,29 @@
 
 
   <div class="top-list hidden" id="show-top-list">
+    
+      <div class="search_list">
+        <%= search_form_for @q do |f| %>
+        <div class="search_keyworrd">
+           <%= f.label :name, "Keyword" %>
+           <%= f.search_field :name_cont %>
+        </div>
+        <div class="search_date">
+            <%= f.label :start_time,"日付" %>
+            <%= f.date_select :start_time_gteq %>日〜
+            <%= f.date_select :start_time_lt %>日
+        </div>
+        <div class="seach" id="seach">
+            <%= f.submit "検索" %>
+        </div>
+      </div>
 
-      <table>
+      <table class="top-list-table">
           <thead>
               <tr>
                  <th>詳細</th>
-                 <th>日付</th>
-                 <th>名前</th>
+                 <th><%= sort_link(@q, :start_time, "日付") %></th>
+                 <th><%= sort_link(@q, :name, "名前") %></th>
                  <th>金額</th>
                  <th>購入場所</th>
                  <th>カテゴリー</th>
@@ -75,9 +97,13 @@
               <td><%= expense.category.name %></td>
               <td><%= expense.payment.name %></td>
              </tr>
+             <% end %>
           <% end %>
+           
           </tbody>
       </table>
+      <%= paginate @expenses %> 
+      <%=link_to 'リセット', root_path, class:"back-btn" %>
 
   </div>
 

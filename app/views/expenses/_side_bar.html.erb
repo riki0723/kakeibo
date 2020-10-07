@@ -1,7 +1,7 @@
 
 <div class="side-bar-header">
 
-  <div class="header-logo">家計簿</div>
+  <div class="header-logo">出費管理アプリ</div>
 
 </div>
 
@@ -20,36 +20,31 @@
 
   <div class="list">
     <div class="list-name">
-      <a href="#">新規登録</a>
+      <%= link_to "新規入力", new_expense_path, class: "post" %>
     </div>
   </div>
 
 
 
-  <table>
+  <%# <table> %>
 
-  <thead>
-  <div>最新の履歴</div>
-    <tr>
-      <th>日付</th>
-      <th>金額</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <%# <thead> %>
+  <%# <div>最新の履歴</div> %>
+    <%# <tr class="sideber-chokin"> %>
+      <%# <th>日付</th> %>
+      <%# <th>金額</th> %>
+      <%# <th colspan="3"></th> %>
+    <%# </tr> %>
+  <%# </thead> %>
 
-  <tbody>
-    <% @expenses.last(5).each do |expense| %>
-      <tr>
-        <td><%= expense.start_time.strftime("%m/%d") %></td>
-        <td>¥<%= expense.price %></td>
-      </tr>
+  <%# <tbody class="sideber-chokin-list"> %>
+    <%# <% @expenses.last(5).each do |expense| %> 
+      <%# <tr class="list"> %>
+        <%# <td><%= expense.start_time.strftime("%m/%d") %></td> 
+        <%# <td>¥<%= expense.price %></td> 
+      <%# </tr> %>
 
-    <% end %>
-  </tbody>
-</table>
-
-
-
-
-  
+    <%# <% end %> 
+  <%# </tbody> %>
+<%# </table> %>
 </div>

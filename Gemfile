@@ -63,3 +63,5 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'ransack'
+
+gem 'kaminari'
