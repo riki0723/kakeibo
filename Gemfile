@@ -65,3 +65,7 @@ gem 'active_hash'
 gem 'ransack'
 
 gem 'kaminari'
+
+group :production do
+  gem 'rails_12factor'
+end
