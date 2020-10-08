@@ -16,14 +16,20 @@
 }
 
 
+/* サイドバーのCSS */
+
+/* サイドバー、headerのCSS */
 .side-bar-header {
   height: 80px;
   padding: 23px 40px;
   background-color: gold;
   border-radius: 15px;
-  margin : 1px ;
+  margin : 0 0 1px 0;
   border : 1px solid yellow ;
-  
+}
+
+.header-logo-link {
+  text-decoration: none;
 }
 .link-lists {
     height: calc(100vh - 80px);
