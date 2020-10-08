@@ -85,8 +85,6 @@
 
 .main-header-title {
   font-size: 25px;
-  
-
 }
 
 .right-header{
@@ -99,19 +97,20 @@
   height: calc(100vh - 80px);
 }
 
+
+/* トップページのcss */
 .top-top {
   height: calc(100vh - 80px);
-  
 }
 
 h1 {
- 
+  padding: 20px 0 0 30px;
   font-size: 30px;
 }
 
 h2 {
   font-size: 20px;
- 
+  padding: 20px 0 0 30px;
 }
 
 .info {
