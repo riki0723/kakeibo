@@ -196,6 +196,27 @@ td{
   border: solid 1px #000000; 
 } 
 
+/* userの新規登録画面 */
+
+.new-user{ 
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.input-default {
+  width: 300px;
+  height: 30px;
+}
+
+.input-name {
+  width: 300px;
+  height: 30px;
+}
+
 /* 支出の新規登録 */
 .new-expense {
   display: flex;
