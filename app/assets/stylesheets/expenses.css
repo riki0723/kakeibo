@@ -118,6 +118,7 @@ h2 {
   margin: 10px 0 40px 30px;
 }
 
+
 /* トップカレンダーのcss */
 .top-calender{
   padding: 20px 30px 20px 30px;
@@ -133,44 +134,66 @@ h2 {
   font-size: 30px;
 }
 
-.top-list {
 
+/* トップリスト（出費履歴）のcss */
+.top-list {
   height: calc(100vh - 80px);
+  position: relative;
 }
+
+.top-list-all {
+  width: 1000px;
+  position: absolute;
+  top: 10px;
+  left:100px;
+  justify-content: center;
+
+}
+
+.search_list {
+  text-align: center;
+  background-color: gold;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  padding-top: 8px;
+  margin-bottom: 10px;
+}
+
 
 .top-list-table {
   width: calc(100% - 10px);
   border: double 1px #000000; 
-  height: 300px;
-  border-radius: 25px;
+  height: 30px;
+  
 } 
 
 .search_list {
   text-align: center;
   background-color: gold;
-  height: 85px;
+ 
   width: 500px;
   border-radius: 20px;
-  
-  
 }
 
  tr{
   padding: 20px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
+  height: 5px;
   
 } 
 
 th{
   background-color: gold;
   padding: 5px 10px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
+  height: 5px;
   
 } 
 
 td{
   padding: 5px 10px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
 } 
 
 /* 支出の新規登録 */

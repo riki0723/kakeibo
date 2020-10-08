@@ -57,7 +57,7 @@
 
 
   <div class="top-list hidden" id="show-top-list">
-    
+    <div class="top-list-all">
       <div class="search_list">
         <%= search_form_for @q do |f| %>
         <div class="search_keyworrd">
@@ -71,6 +71,7 @@
         </div>
         <div class="seach" id="seach">
             <%= f.submit "検索" %>
+            <%=link_to 'リセット', root_path, class:"back-btn" %>
         </div>
       </div>
 
@@ -104,7 +105,7 @@
           </tbody>
       </table>
       <%= paginate @expenses %> 
-      <%=link_to 'リセット', root_path, class:"back-btn" %>
+    </div>
 
   </div>
 
