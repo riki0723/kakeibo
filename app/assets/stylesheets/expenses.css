@@ -31,6 +31,8 @@
 .header-logo-link {
   text-decoration: none;
 }
+
+/* サイドバーメインのCSS */
 .link-lists {
     height: calc(100vh - 80px);
     padding: 20px 10px;
@@ -40,24 +42,33 @@
     
   }
 
+  ul {
+    list-style: none;
+  }
+  .post {
+  text-decoration: none;
+  }
+
 
   .show {
     font-size: 20px;
     margin: 10px 0px;
     border-radius: 25px;
-    padding :  20px ;
-    justify-content: center
+    padding :  10px ;
+    justify-content: center;
+    text-align: center;
+    background-color: orange;
     
   }
 
-  .list-name{
+  /* .list-name{
     font-size: 20px;
     margin: 10px 0px;
     border-radius: 25px;
     padding :  20px ;
     justify-content: center
 
-  }
+  } */
 
 
 

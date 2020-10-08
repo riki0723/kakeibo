@@ -9,7 +9,7 @@
 
 <div class="link-lists">
   
-  <ul class="all-lists">
+  <ul>
 
     <li class="show" id="show-top">top</li>
  
@@ -17,14 +17,12 @@
 
     <li class="show" id="show-rireki">出費履歴 </li>
 
+    <li class="show" ><%= link_to "新規入力", new_expense_path, class: "post" %> </li>
+
   </ul>
 
 
-  <div class="list">
-    <div class="list-name">
-      <%= link_to "新規入力", new_expense_path, class: "post" %>
-    </div>
-  </div>
+
 
 
 
