@@ -118,11 +118,19 @@ h2 {
   margin: 10px 0 40px 30px;
 }
 
+/* トップカレンダーのcss */
 .top-calender{
-  padding: 20px 30px;
-
+  padding: 20px 30px 20px 30px;
   height: calc(100vh - 80px);
 
+}
+
+.calendar-heading {
+  padding: 0 0 10px 30px;
+}
+
+.calendar-title {
+  font-size: 30px;
 }
 
 .top-list {
