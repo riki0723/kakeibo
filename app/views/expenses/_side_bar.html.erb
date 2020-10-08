@@ -1,13 +1,15 @@
-
+<%# サイドバーのheader %>
 <div class="side-bar-header">
 
-  <div class="header-logo">出費管理アプリ</div>
+  <div class="header-logo">
+    <%=link_to '出費管理アプリ', root_path, class:"header-logo-link" %>
+  </div>
 
 </div>
 
 <div class="link-lists">
   
-  <ul class="all-lists">
+  <ul>
 
     <li class="show" id="show-top">top</li>
  
@@ -15,14 +17,12 @@
 
     <li class="show" id="show-rireki">出費履歴 </li>
 
+    <li class="show" ><%= link_to "新規入力", new_expense_path, class: "post" %> </li>
+
   </ul>
 
 
-  <div class="list">
-    <div class="list-name">
-      <%= link_to "新規入力", new_expense_path, class: "post" %>
-    </div>
-  </div>
+
 
 
 

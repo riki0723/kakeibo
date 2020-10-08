@@ -1,19 +1,38 @@
+/* 全体のビュー */
 .wrapper {
   display: flex;
 }
+
 .side-bar {
   width: 200px;
   height: 100vh;
 }
+
+.main-top {
+  width: calc(100% - 200px);
+  border-radius: 15px;
+  border : 1px solid yellow ;
+  height: 100vh;
+}
+
+
+/* サイドバーのCSS */
+
+/* サイドバー、headerのCSS */
 .side-bar-header {
   height: 80px;
   padding: 23px 40px;
   background-color: gold;
   border-radius: 15px;
-  margin : 1px ;
+  margin : 0 0 1px 0;
   border : 1px solid yellow ;
-  
 }
+
+.header-logo-link {
+  text-decoration: none;
+}
+
+/* サイドバーメインのCSS */
 .link-lists {
     height: calc(100vh - 80px);
     padding: 20px 10px;
@@ -23,68 +42,75 @@
     
   }
 
+  ul {
+    list-style: none;
+  }
+  .post {
+  text-decoration: none;
+  }
+
 
   .show {
     font-size: 20px;
     margin: 10px 0px;
     border-radius: 25px;
-    padding :  20px ;
-    justify-content: center
+    padding :  10px ;
+    justify-content: center;
+    text-align: center;
+    background-color: orange;
     
   }
 
-  .list-name{
+  /* .list-name{
     font-size: 20px;
     margin: 10px 0px;
     border-radius: 25px;
     padding :  20px ;
     justify-content: center
 
-  }
+  } */
 
 
 
   
-
-.main-top {
-  background-color: gold;
-  width: calc(100% - 200px);
-  border-radius: 15px;
-  margin : 1px ;
-  border : 1px solid yellow ;
-  height: calc(100vh - 80px);
-}
+/* メインheaderのcss */
 .main-header {
   height: 80px;
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
+  background-color: gold;
+  border-radius: 15px 15px 0 0; 
 }
 
 .main-header-title {
   font-size: 25px;
-  margin : 0px 40px;
-
 }
 
 .right-header{
   margin : 0px 40px;
 }
 
+/* メイントップスクリーンのcss */
 .top-screen {
   background-color: #FFFFE0;
   height: calc(100vh - 80px);
-  padding: 20px 30px;
+}
+
+
+/* トップページのcss */
+.top-top {
+  height: calc(100vh - 80px);
 }
 
 h1 {
-  margin: 10px 0 0px 30px;
+  padding: 20px 0 0 30px;
   font-size: 30px;
 }
 
 h2 {
   font-size: 20px;
-  margin: 10px 0 20px 30px;
+  padding: 20px 0 0 30px;
 }
 
 .info {
@@ -92,53 +118,115 @@ h2 {
   margin: 10px 0 40px 30px;
 }
 
+
+/* トップカレンダーのcss */
 .top-calender{
-  margin : 60px 30px 60px 80px;
-  width: calc(100% - 200px);
-
-}
-
-.top-list {
-  width: calc(100% - 200px);
-  margin : 60px 30px 60px 80px;
+  padding: 20px 30px 20px 30px;
   height: calc(100vh - 80px);
+
 }
+
+.calendar-heading {
+  padding: 0 0 10px 30px;
+}
+
+.calendar-title {
+  font-size: 30px;
+}
+
+
+/* トップリスト（出費履歴）のcss */
+.top-list {
+  height: calc(100vh - 80px);
+  position: relative;
+}
+
+.top-list-all {
+  width: 1000px;
+  position: absolute;
+  top: 10px;
+  left:100px;
+  justify-content: center;
+
+}
+
+.search_list {
+  text-align: center;
+  background-color: gold;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  padding-top: 8px;
+  margin-bottom: 10px;
+}
+
 
 .top-list-table {
   width: calc(100% - 10px);
   border: double 1px #000000; 
-  height: 300px;
-  border-radius: 25px;
+  height: 30px;
+  
 } 
 
 .search_list {
   text-align: center;
   background-color: gold;
-  margin : 20px 30px 20px 30px;
-  height: 85px;
+ 
   width: 500px;
   border-radius: 20px;
-  
-  
 }
 
  tr{
   padding: 20px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
+  height: 5px;
   
 } 
 
 th{
   background-color: gold;
   padding: 5px 10px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
+  height: 5px;
   
 } 
 
 td{
   padding: 5px 10px;
-  border: double 1px #000000; 
+  border: solid 1px #000000; 
 } 
+
+/* userの新規登録画面 */
+
+.new-user{ 
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
+
+.input-default {
+  width: 300px;
+  height: 30px;
+}
+
+.input-name {
+  width: 300px;
+  height: 30px;
+}
+
+/* userのログイン画面 */
+
+.login-expense {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFE0;
+  text-align: center;
+  justify-content: center
+}
 
 /* 支出の新規登録 */
 .new-expense {

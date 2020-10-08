@@ -28,8 +28,9 @@
 <div class="top-screen">
 
   <div class="top-top" id="show-top-top">
-    <h1>トップページ</h1>
-      <div class="info">自分がどのくらい出費しているかを確認できるアプリです！自分の出費を確認しましょう！</div>
+    <h1>アプリ説明</h1>
+      <div class="info">給料日前とかに、気付いたらお金がない……そんな事ありませんか？</div>
+      <div class="info">そんな時に、自分がどのくらい出費しているかを確認できるアプリです！出費を登録して自分の出費を確認しましょう！</div>
     <h1>機能について</h1>
       <h2>カレンダー</h2>
         <div class="info">カレンダーで日付事の出費を確認できます</div>
@@ -56,7 +57,7 @@
 
 
   <div class="top-list hidden" id="show-top-list">
-    
+    <div class="top-list-all">
       <div class="search_list">
         <%= search_form_for @q do |f| %>
         <div class="search_keyworrd">
@@ -70,6 +71,7 @@
         </div>
         <div class="seach" id="seach">
             <%= f.submit "検索" %>
+            <%=link_to 'リセット', root_path, class:"back-btn" %>
         </div>
       </div>
 
@@ -103,7 +105,7 @@
           </tbody>
       </table>
       <%= paginate @expenses %> 
-      <%=link_to 'リセット', root_path, class:"back-btn" %>
+    </div>
 
   </div>
 
