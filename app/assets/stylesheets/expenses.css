@@ -1,10 +1,21 @@
+/* 全体のビュー */
 .wrapper {
   display: flex;
 }
+
 .side-bar {
   width: 200px;
   height: 100vh;
 }
+
+.main-top {
+  width: calc(100% - 200px);
+  border-radius: 15px;
+  border : 1px solid yellow ;
+  height: calc(100vh - 80px);
+}
+
+
 .side-bar-header {
   height: 80px;
   padding: 23px 40px;
@@ -46,14 +57,6 @@
 
   
 
-.main-top {
-  background-color: gold;
-  width: calc(100% - 200px);
-  border-radius: 15px;
-  margin : 1px ;
-  border : 1px solid yellow ;
-  height: calc(100vh - 80px);
-}
 .main-header {
   height: 80px;
   padding: 20px 30px;
