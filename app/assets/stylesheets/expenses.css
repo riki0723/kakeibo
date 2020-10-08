@@ -62,12 +62,14 @@
 
 
   
-
+/* メインheaderのcss */
 .main-header {
   height: 80px;
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
+  background-color: gold;
+  border-radius: 15px 15px 0 0; 
 }
 
 .main-header-title {
