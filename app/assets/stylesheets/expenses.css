@@ -173,6 +173,7 @@ h2 {
   padding: 20px;
   /* border: solid 1px #000000;  */
   height: 5px;
+  border-collapse: collapse;
   
 } 
 
