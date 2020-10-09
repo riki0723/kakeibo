@@ -156,8 +156,9 @@ h2 {
 
 .top-list-table {
   width: calc(100% - 10px);
-  /* border: solid 1px #000000;  */
+  border: solid 1px #000000; 
   height: 30px;
+  border-collapse: collapse;
   
 } 
 
@@ -171,7 +172,7 @@ h2 {
 
  tr{
   padding: 20px;
-  /* border: solid 1px #000000;  */
+  border: solid 1px #000000; 
   height: 5px;
   border-collapse: collapse;
   
