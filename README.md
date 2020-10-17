@@ -21,7 +21,7 @@
 https://kakeibo-28781.herokuapp.com/
 
 
-# テスト用テスト用アカウント
+# テスト用アカウント
 ## Basic認証
 ID :admin
 PW :2222
