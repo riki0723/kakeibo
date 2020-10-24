@@ -27,7 +27,7 @@
           <%= f.collection_select(:payment_id, Payment.all, :id, :name, {}, {class:"select-box", id:"expense-payment"}) %>
 
           <div class="edit-expense-body-name">メモ</div>
-          <%= f.text_area :explation, class:"expense-text", id:"expense-memo" %>
+          <%= f.text_area :memo, class:"expense-text", id:"expense-memo" %>
  
           <div class="sell-btn-contents">
             <%= f.submit "変更する" ,class:"sell-btn" %>
