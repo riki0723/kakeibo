@@ -1,11 +1,8 @@
 class ExpensesController < ApplicationController
 
   def index
-    @expenses = current_user.expenses.all.order("created_at DESC")
-    
-
     @q = current_user.expenses.ransack(params[:q])
-    @expenses = @q.result(distinct: true).page(params[:page]).per(10)
+    @expenses = @q.result(distinct: true).page(params[:page]).per(10).order("created_at DESC")
   end
 
 

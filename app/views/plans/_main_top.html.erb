@@ -1,0 +1,44 @@
+<div class="main-header">
+ 
+  <div class="left-header">
+     <div class="main-header-title">
+        <div class="show-lists">カレンダー</div>
+      </div>
+  </div>
+
+  <div class="right-header">
+    <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+       </div>
+    <% else %>
+        <div class="grid-6">
+         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+         <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+       </div>
+    <% end %>
+  </div>
+
+</div>
+
+<div class="top-screen">
+
+  <div class="top-calender" id="show-top-calender">
+       <%= month_calendar events: @expenses do |date, expenses| %>
+          <%= date.day %>
+  
+           <% if current_user.expenses.where(start_time: date).sum(:price) > 0%>
+
+            <div>支出額は
+               <%= current_user.expenses.where(start_time: date).sum(:price) %>円です
+            </div>
+
+           <% end %>
+ 
+        <% end %>
+   </div>
+
+
+
+</div>

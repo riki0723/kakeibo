@@ -2,7 +2,7 @@
  
   <div class="left-header">
       <div class="main-header-title">
-        <div class="show-lists" id="pull-down-top">出費履歴</div>
+        <div class="show-lists" id="pull-down-top">トップページ</div>
       </div>
   </div>
 
@@ -24,30 +24,24 @@
 
 <div class="top-screen">
 
-  <div class="top-list" id="show-top-list">
-    <div class="top-list-all">
-      <div class="search_list">
-        <%= search_form_for @q do |f| %>
-        <div class="search_keyworrd">
-           <%= f.label :name, "Keyword" %>
-           <%= f.search_field :name_cont %>
-        </div>
-        <div class="search_date">
-            <%= f.label :start_time,"日付" %>
-            <%= f.date_select :start_time_gteq %>日〜
-            <%= f.date_select :start_time_lt %>日
-        </div>
-        <div class="seach" id="seach">
-            <%= f.submit "検索" %>
-        </div>
-      </div>
+  
 
-      <table class="top-list-table">
+    <div class="top-info">
+
+    <h1>機能について</h1>
+      <h2>カレンダー</h2>
+        <div class="info">カレンダーで日付事の出費を確認できます</div>
+      <h2>出費履歴</h2>
+        <div class="info">日付の絞り込みなどにより出費の履歴を確認できます</div>
+    </div>
+
+   <table class="top-list-table">
+   <h2>最新の出費履歴</h2>
           <thead>
               <tr>
                  <th>詳細</th>
-                 <th><%= sort_link(@q, :start_time, "日付") %></th>
-                 <th><%= sort_link(@q, :name, "名前") %></th>
+                 <th>日付</th>
+                 <th>名前</th>
                  <th>金額</th>
                  <th>購入場所</th>
                  <th>カテゴリー</th>
@@ -55,8 +49,8 @@
                </tr>
            </thead>
 
-          <tbody>
-          <% @expenses.each do |expense| %>
+         <tbody>
+          <% @expenses.last(3).each do |expense| %>
             <tr>
               <td><%= link_to "詳細", expense_path(expense.id), class: "post" %></td>
               <td><%= expense.start_time.strftime("%m/%d") %></td>
@@ -65,16 +59,13 @@
               <td><%= expense.wheretobuy %></td>
               <td><%= expense.category.name %></td>
               <td><%= expense.payment.name %></td>
-             </tr>
-             <% end %>
+             </tr>            
           <% end %>
            
           </tbody>
       </table>
-      <%= paginate @expenses %> 
-    </div>
+ </table>
 
-  </div>
 
 
 </div>
