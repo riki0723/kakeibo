@@ -30,8 +30,8 @@
   
            <% if current_user.expenses.where(start_time: date).sum(:price) > 0%>
 
-            <div>支出額は
-               <%= current_user.expenses.where(start_time: date).sum(:price) %>円です
+            <div>
+               <%= current_user.expenses.where(start_time: date).sum(:price) %>円出費
             </div>
 
            <% end %>

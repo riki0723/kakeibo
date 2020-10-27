@@ -144,13 +144,22 @@ h2 {
 }
 
 .search_list {
-  text-align: center;
   background-color: gold;
   height: 100px;
-  width: 600px;
+  width: 1000px;
   border-radius: 20px;
   padding-top: 8px;
   margin-bottom: 10px;
+  text-align: center;
+}
+.search_list_top{
+  display: flex;
+  justify-content: center;
+}
+
+
+.search_keyworrd{
+  padding-right: 20px;
 }
 
 
@@ -162,13 +171,7 @@ h2 {
   
 } 
 
-.search_list {
-  text-align: center;
-  background-color: gold;
- 
-  width: 500px;
-  border-radius: 20px;
-}
+
 
  tr{
   padding: 20px;
