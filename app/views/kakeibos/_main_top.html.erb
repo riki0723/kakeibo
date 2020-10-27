@@ -1,0 +1,41 @@
+<div class="main-header">
+ 
+  <div class="left-header">
+      <div class="main-header-title">
+        <div class="show-lists" id="pull-down-top">トップページ</div>
+      </div>
+  </div>
+
+  <div class="right-header">
+    <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+       </div>
+    <% else %>
+        <div class="grid-6">
+         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+         <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+       </div>
+    <% end %>
+  </div>
+
+</div>
+
+<div class="top-screen">
+
+  <div class="top-top" id="show-top-top">
+    <div class="top-info">
+    <h1>アプリ説明</h1>
+      <div class="info">給料日前とかに、気付いたらお金がない……そんな事ありませんか？</div>
+      <div class="info">そんな時に、自分がどのくらい出費しているかを確認できるアプリです！出費を登録して自分の出費を確認しましょう！</div>
+    <h1>機能について</h1>
+      <h2>カレンダー</h2>
+        <div class="info">カレンダーで日付事の出費を確認できます</div>
+      <h2>出費履歴</h2>
+        <div class="info">日付の絞り込みなどにより出費の履歴を確認できます</div>
+    </div>
+  </div>
+
+
+</div>

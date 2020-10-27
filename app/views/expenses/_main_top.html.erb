@@ -2,7 +2,7 @@
  
   <div class="left-header">
       <div class="main-header-title">
-        <div class="show-lists" id="pull-down-top">top</div>
+        <div class="show-lists" id="pull-down-top">出費履歴</div>
       </div>
   </div>
 
@@ -24,36 +24,7 @@
 
 <div class="top-screen">
 
-  <div class="top-top" id="show-top-top">
-    <div class="top-info">
-    <h1>アプリ説明</h1>
-      <div class="info">給料日前とかに、気付いたらお金がない……そんな事ありませんか？</div>
-      <div class="info">そんな時に、自分がどのくらい出費しているかを確認できるアプリです！出費を登録して自分の出費を確認しましょう！</div>
-    <h1>機能について</h1>
-      <h2>カレンダー</h2>
-        <div class="info">カレンダーで日付事の出費を確認できます</div>
-      <h2>出費履歴</h2>
-        <div class="info">日付の絞り込みなどにより出費の履歴を確認できます</div>
-    </div>
-  </div>
-
-  <div class="top-calender hidden" id="show-top-calender">
-       <%= month_calendar events: @expenses do |date, expenses| %>
-          <%= date.day %>
-  
-           <% if current_user.expenses.where(start_time: date).sum(:price) > 0%>
-
-            <div>支出額は
-               <%= current_user.expenses.where(start_time: date).sum(:price) %>円です
-            </div>
-
-           <% end %>
- 
-        <% end %>
-   </div>
-
-
-  <div class="top-list hidden" id="show-top-list">
+  <div class="top-list" id="show-top-list">
     <div class="top-list-all">
       <div class="search_list">
         <%= search_form_for @q do |f| %>
@@ -68,7 +39,6 @@
         </div>
         <div class="seach" id="seach">
             <%= f.submit "検索" %>
-            <%=link_to 'リセット', root_path, class:"back-btn" %>
         </div>
       </div>
 
