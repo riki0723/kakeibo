@@ -28,19 +28,19 @@
     <div class="top-list-all">
       <div class="search_list">
         <%= search_form_for @q do |f| %>
-
-        <div class="search_keyworrd">
-           <%= f.label :name_or_wheretobuy_or_memo, "キーワード" %>
-           <%= f.search_field :name_or_wheretobuy_or_memo_cont %>
-        </div>
-
-        <div class="search_date">
-            <%= f.label :start_time,"日付" %>
-            <%= f.date_select :start_time_gteq, include_blank: '-' %>日〜
-            <%= f.date_select :start_time_lteq, include_blank: '-' %>日
-        </div>
-
-        <div class="search_date">
+        <div class="search_list_top">
+          <div class="search_keyworrd">
+             <%= f.label :name_or_wheretobuy_or_memo, "キーワード" %>
+             <%= f.search_field :name_or_wheretobuy_or_memo_cont %>
+          </div>
+        
+          <div class="search_date">
+              <%= f.label :start_time,"日付" %>
+              <%= f.date_select :start_time_gteq, include_blank: '-' %>日〜
+              <%= f.date_select :start_time_lteq, include_blank: '-' %>日
+          </div>
+       </div>
+        <div class="search_payment">
             <%= f.label :payment_id,"支払い方法" %>
             <%= f.radio_button :payment_id_eq, '', {:checked => true} %>指定なし
             <%= f.radio_button :payment_id_eq, 2 %>現金
