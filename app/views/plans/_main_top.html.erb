@@ -27,23 +27,32 @@
 <%= link_to "出費予定を登録", new_plan_path, class: "post" %> 
 
   <div class="top-calender" id="show-top-calender">
-       <%= month_calendar events: @expenses do |date, expenses| %>
+       <%= month_calendar events: @plans do |date, plans| %>
           <%= date.day %>
   
            <% if current_user.expenses.where(start_time: date).sum(:price) > 0%>
-
-            <div>
-               <%= current_user.expenses.where(start_time: date).sum(:price) %>円出費
-            </div>
-
+             <div>
+                <%= current_user.expenses.where(start_time: date).sum(:price) %>円出費
+             </div>
            <% end %>
- 
+
+           <% plans.each do |plan| %>
+             <div>
+               <%= link_to "✅", plan %>
+             </div>
+           <% end %>
+
+           <% if current_user.plans.where(start_time: date).sum(:price) > 0%>
+             <div>
+                <%= current_user.plans.where(start_time: date).sum(:price) %>円出費予定
+             </div>
+           <% end %>
+
+
         <% end %>
    </div>
 
-   <% @plans.each do |plan| %>
 
- <% end %>
 
 
 </div>
