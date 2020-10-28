@@ -24,6 +24,8 @@
 
 <div class="top-screen">
 
+<%= link_to "出費予定を登録", new_plan_path, class: "post" %> 
+
   <div class="top-calender" id="show-top-calender">
        <%= month_calendar events: @expenses do |date, expenses| %>
           <%= date.day %>
@@ -39,6 +41,9 @@
         <% end %>
    </div>
 
+   <% @plans.each do |plan| %>
+
+ <% end %>
 
 
 </div>

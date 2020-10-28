@@ -3,6 +3,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
     create_table :plans do |t|
       t.date :start_time
       t.string :name
+      t.integer :price
       t.integer :payment_id
       t.text :memo
       t.integer :user_id

@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_28_070456) do
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "start_time"
     t.string "name"
+    t.integer "price"
     t.integer "payment_id"
     t.text "memo"
     t.integer "user_id"
