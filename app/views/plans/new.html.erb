@@ -13,7 +13,8 @@
           <div class="new-expense-body-name">名前</div>
           <%= f.text_area :name, class:"expense-text", id:"plan-name", placeholder:"購入した物（必須 40文字まで)", maxlength:"40" %>
 
-         <div class="new-expense-body-name">金額¥</div>
+         <div class="new-expense-body-name">金額</div>
+         <span class="sell-yen">¥</span>
          <%= f.text_field :price, class:"price-input", id:"plan-price", placeholder:"例）300" %>
 
           <div class="new-expense-body-name">支払い方法</div>
@@ -25,7 +26,7 @@
 
           <div class="sell-btn-contents">
               <%= f.submit "登録する" ,class:"sell-btn" %>
-              <%=link_to 'もどる', root_path, class:"back-btn" %>
+              <%=link_to 'もどる', plans_path, class:"back-btn" %>
           </div>
         <% end %>
       </div>

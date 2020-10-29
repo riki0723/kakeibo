@@ -6,12 +6,23 @@ class PlansController < ApplicationController
 
   def new
     @plan = Plan.new
-    
   end
 
   def create
     Plan.create(plan_params)
   end
+
+  def edit
+    @plan = Plan.find(params[:id])
+  end
+
+  def update
+    plan = Plan.find(params[:id])
+    plan.update(plan_params)
+  end
+
+
+
 
   private
   def plan_params
