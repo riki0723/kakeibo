@@ -17,10 +17,16 @@ class PlansController < ApplicationController
   end
 
   def update
-    plan = Plan.find(params[:id])
-    plan.update(plan_params)
+    @plan = Plan.find(params[:id])
+    @plan.update(plan_params)
   end
 
+  def destroy
+    @plan = Plan.find(params[:id])
+    @plan.destroy
+    redirect_to plans_path 
+  
+  end
 
 
 
