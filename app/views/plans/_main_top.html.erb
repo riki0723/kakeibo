@@ -25,19 +25,34 @@
 <div class="top-screen">
 
   <div class="top-calender" id="show-top-calender">
-       <%= month_calendar events: @expenses do |date, expenses| %>
-          <%= date.day %>
-  
+       <%= month_calendar events: @plans do |date, plans| %>
+         <%= date.day %>
+         <div class = "clennder-expenses">
            <% if current_user.expenses.where(start_time: date).sum(:price) > 0%>
-
-            <div>
-               <%= current_user.expenses.where(start_time: date).sum(:price) %>円出費
-            </div>
-
+             <div>
+                <%= current_user.expenses.where(start_time: date).sum(:price) %>円出費
+             </div>
            <% end %>
- 
+         </div>
+
+         <div class = "calender-plans">
+           <% plans.each do |plan| %>
+             <div class = "calender-plan">
+               <%= link_to "✅", edit_plan_path(plan.id), class: "get" %>
+             </div>
+           <% end %>
+
+           <% if current_user.plans.where(start_time: date).sum(:price) > 0%>
+             <div>
+                <%= current_user.plans.where(start_time: date).sum(:price) %>円出費予定
+             </div>
+           <% end %>
+         </div>
+
+
         <% end %>
    </div>
+
 
 
 

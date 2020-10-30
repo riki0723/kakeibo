@@ -121,12 +121,21 @@ h2 {
 
 .calendar-heading {
   padding: 0 0 10px 30px;
+  display: flex;
+}
+
+.calendar-heading-left {
+  margin-right: 100px;
 }
 
 .calendar-title {
   font-size: 30px;
 }
 
+
+.calender-plan {
+  display: inline-block;
+}
 
 /* トップリスト（出費履歴）のcss */
 .top-list {
@@ -346,9 +355,15 @@ td{
   display: flex;
   font-size: 20px;
   justify-content: center;
-  
+}
 
-  
+.button-type2 {
+  margin: 1px;
+  padding: 8px;
+  background-color: gold;
+  border:1px solid black;
+  width: 130px;
+  text-align:center
 }
 
 

@@ -1,8 +1,15 @@
 <div class="simple-calendar">
   <div class="calendar-heading">
-    <%= link_to t('simple_calendar.previous', default: '戻る'), calendar.url_for_previous_view %>
-    <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
-    <%= link_to t('simple_calendar.next', default: '次へ'), calendar.url_for_next_view %>
+    <div class ="calendar-heading-left">
+       <%= link_to t('simple_calendar.previous', default: '戻る'), calendar.url_for_previous_view %>
+       <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+        <%= link_to t('simple_calendar.next', default: '次へ'), calendar.url_for_next_view %>
+    </div>
+    <div lass ="calendar-heading-right">
+      <div class="button-type2">
+        <%= link_to "出費予定を登録", new_plan_path, class: "post" %> 
+      </div>
+    </div>
   </div>
 
   <table class="table table-striped">

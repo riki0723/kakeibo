@@ -66,6 +66,33 @@
       </table>
  </table>
 
+  <table class="top-list-table">
+   <h2>最新の出費予定履歴</h2>
+          <thead>
+              <tr>
+                 <th>詳細</th>
+                 <th>日付</th>
+                 <th>名前</th>
+                 <th>金額</th>
+                 <th>支払い方法</th>
+               </tr>
+           </thead>
+
+         <tbody>
+          <% @plans.last(3).each do |plan| %>
+            <tr>
+            <td><%= link_to "詳細", edit_plan_path(plan.id), class: "get" %></td>
+              <td><%= plan.start_time.strftime("%m/%d") %></td>
+              <td><%= plan.name %></td>
+              <td>¥<%= plan.price %></td>
+              <td><%= plan.payment.name %></td>
+             </tr>            
+          <% end %>
+           
+          </tbody>
+      </table>
+ </table>
+
 
 
 </div>
