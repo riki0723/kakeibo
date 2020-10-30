@@ -24,16 +24,16 @@
 
 <div class="top-screen">
 
-  
-
     <div class="top-info">
+      <div class="top-info-left">
+        <div class="top-info-title">今日</div>
+        <div class="top-info-left-body">
+            本日の出費は<%= current_user.expenses.where(start_time: Date.today).sum(:price) %>円です
+            <%= current_user.plans.where(start_time: Date.today).sum(:price) %>円出費予定です
+        </div>
+      </div>
 
-    <h1>機能について</h1>
-      <h2>カレンダー</h2>
-        <div class="info">カレンダーで日付事の出費を確認できます</div>
-      <h2>出費履歴</h2>
-        <div class="info">日付の絞り込みなどにより出費の履歴を確認できます</div>
-    </div>
+
 
    <table class="top-list-table">
    <h2>最新の出費履歴</h2>
@@ -91,7 +91,7 @@
            
           </tbody>
       </table>
- </table>
+  </table>
 
 
 
