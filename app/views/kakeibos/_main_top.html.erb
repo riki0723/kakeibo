@@ -33,8 +33,14 @@
         </div>
       </div>
 
-
-
+      <div class="top-info-right">
+        <div class="top-info-title">明日</div>
+        <div class="top-info-right-body">
+            <%= current_user.plans.where(start_time: Date.tomorrow).sum(:price) %>円出費予定です口座の残高を確認しましょう！
+        </div>
+      </div>
+    </div>
+    
    <table class="top-list-table">
    <h2>最新の出費履歴</h2>
           <thead>
