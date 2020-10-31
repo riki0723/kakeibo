@@ -24,7 +24,7 @@
           <%= f.text_area :memo, class:"expense-text", id:"plan-memo" %>
  
           <div class="sell-btn-contents">
-            <%= f.submit "変更する" ,class:"sell-btn" %>
+            <%= f.submit "変更する" ,class:"button-type1" %>
             <%= link_to '削除', plan_path {plan.id}, method: :delete, class:'plan-destroy' %>
             
             <%=link_to 'もどる', plans_path, class:"back-btn" %>
