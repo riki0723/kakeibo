@@ -95,20 +95,39 @@
 }
 
 
-h1 {
-  padding: 20px 0 0 30px;
-  font-size: 30px;
-  margin-top: 0px;
-}
-
 h2 {
   font-size: 20px;
   padding: 0 0 0 30px;
 }
 
-.info {
-  font-size: 15px;
-  margin: 10px 0 40px 30px;
+.top-info {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  text-align:center
+  
+}
+
+.top-info-title{
+  font-size: 20px;
+  margin: 10px 0;
+  background-color: orange;
+}
+
+.top-info-left {
+  border: solid 1px #000000; 
+  background-color: gold;
+}
+
+.top-info-right {
+  border: solid 1px #000000; 
+  background-color: gold;
+}
+
+.top-info-left-body1 {
+  margin:0 10px 10px 10px;
+  
 }
 
 

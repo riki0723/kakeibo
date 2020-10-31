@@ -25,18 +25,40 @@
 <div class="top-screen">
 
     <div class="top-info">
+
+    <div class="top-info-left">
+        <div class="top-info-title">昨日</div>
+        <div class="top-info-left-body">
+          <div class="top-info-left-body1">
+            <%= current_user.expenses.where(start_time: Date.yesterday).sum(:price) %>円出費しました
+          </div>
+          <div class="top-info-left-body1">
+            出費を見直しましょう！！
+          </div>
+        </div>
+      </div>
+
       <div class="top-info-left">
         <div class="top-info-title">今日</div>
         <div class="top-info-left-body">
-            本日の出費は<%= current_user.expenses.where(start_time: Date.today).sum(:price) %>円です
-            <%= current_user.plans.where(start_time: Date.today).sum(:price) %>円出費予定です
+          <div class="top-info-left-body1">
+            <%= current_user.expenses.where(start_time: Date.today).sum(:price) %>円出費しました
+          </div>
+          <div class="top-info-left-body1">
+            <%= current_user.plans.where(start_time: Date.today).sum(:price) %>円出費予定があります
+          </div>
         </div>
       </div>
 
       <div class="top-info-right">
         <div class="top-info-title">明日</div>
         <div class="top-info-right-body">
-            <%= current_user.plans.where(start_time: Date.tomorrow).sum(:price) %>円出費予定です口座の残高を確認しましょう！
+          <div class="top-info-left-body1">
+            <%= current_user.plans.where(start_time: Date.tomorrow).sum(:price) %>円出費予定です
+          </div>
+          <div class="top-info-left-body1">
+            口座の残高を確認しましょう！
+          </div>
         </div>
       </div>
     </div>
