@@ -376,6 +376,17 @@ td{
   justify-content: center;
 }
 
+.button-type1 {
+  margin: 1px;
+  padding: 8px;
+  background-color: #FFFFE0;
+  border:1px solid black;
+  height: 40px;
+  width: 130px;
+  text-align:center
+  
+}
+
 .button-type2 {
   margin: 1px;
   padding: 8px;
