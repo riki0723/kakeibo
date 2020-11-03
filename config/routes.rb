@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "kakeibos#index"
     resources :expenses, only: [:index, :new, :create, :show, :destroy, :edit, :update]
     resources :plans, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :analysis, only: [:index]
 end
