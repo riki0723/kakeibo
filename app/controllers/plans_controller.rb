@@ -9,7 +9,15 @@ class PlansController < ApplicationController
   end
 
   def create
-    Plan.create(plan_params)
+    @plan = Plan.new(plan_params)
+
+    if @plan.valid?
+      @plan.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
+
   end
 
   def edit

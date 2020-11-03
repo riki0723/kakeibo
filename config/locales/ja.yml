@@ -1,0 +1,13 @@
+ja:
+ activerecord:
+   attributes:
+     expense:
+       name: 品物
+       price: 金額
+       wheretobuy: 購入場所
+       category_id: 項目
+       payment_id: 支払い方法
+     plan:
+      name: 名前
+      price: 金額
+      payment_id: 支払い方法

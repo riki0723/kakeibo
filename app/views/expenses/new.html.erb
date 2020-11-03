@@ -6,18 +6,20 @@
 
       <div class="new-expense-body">
         <%= form_with model: @expense, local: true do |f| %>
+         <%= render 'layouts/error_messages', model: f.object %>
 
           <div class="new-expense-body-name">支払日</div>
           <%= f.date_select :start_time, id:"expense-day" %>
 
           <div class="new-expense-body-name">品物</div>
-          <%= f.text_area :name, class:"expense-text", id:"expense-name", placeholder:"購入した物（必須 40文字まで)", maxlength:"40" %>
+          <%= f.text_area :name, class:"expense-text", id:"expense-name", placeholder:"必須：購入した物", maxlength:"40" %>
 
-         <div class="new-expense-body-name">金額¥</div>
-         <%= f.text_field :price, class:"price-input", id:"expense-price", placeholder:"例）300" %>
+         <div class="new-expense-body-name">金額</div>
+         <span class="sell-yen">¥</span>
+         <%= f.text_field :price, class:"price-input", id:"expense-price", placeholder:"必須：半角数字で入力してください" %>
 
           <div class="new-expense-body-name">購入場所</div>
-          <%= f.text_area :wheretobuy, class:"expense-text", id:"expense-wheretobuy", placeholder:"購入した場所（必須 40文字まで)", maxlength:"40" %>
+          <%= f.text_area :wheretobuy, class:"expense-text", id:"expense-wheretobuy", placeholder:"必須：購入した場所", maxlength:"40" %>
 
           <div class="new-expense-body-name">項目</div>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"expense-category"}) %>

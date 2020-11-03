@@ -11,7 +11,15 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    Expense.create(expense_params)
+    @expense =Expense.new(expense_params)
+
+    if @expense.valid?
+      @expense.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
+    
   end
 
   def edit
