@@ -11,7 +11,6 @@ class ExpensesController < ApplicationController
   end
 
   def create
-   
     @expense =Expense.new(expense_params)
 
     if @expense.valid?
@@ -20,9 +19,7 @@ class ExpensesController < ApplicationController
     else
       render 'new'
     end
-      
-  
-    # Expense.create(expense_params)
+    
   end
 
   def edit
