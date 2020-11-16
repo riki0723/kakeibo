@@ -254,23 +254,44 @@ td{
   /* justify-content: center */
 /* } */
 .login-top {
-  height: 50px;
+  height: 60px;
   text-align: center;
-  font-size: 30px;
-  background-color: palegreen;
+  background-color: orange;
+  align-items: center;
+ 
 }
+
+.login-top-title{
+  font-size: 40px;
+}
+
 
 .login-body {
   display: flex;
   text-align: center;
   height: 100%;
+  margin: 10px 5px;
 }
 
 .login-left {
   width: 50%;
-  background-color: orange;
+  position: relative;
 }
 
+.login-left p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-family :Quicksand, sans-serif;
+  font-size: 1.5em;
+  
+  background-color: burlywood;
+}
 .image {
   width: 100%;
 }
