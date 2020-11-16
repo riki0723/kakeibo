@@ -245,14 +245,47 @@ td{
 
 /* userのログイン画面 */
 
-.login-expense {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: #FFFFE0;
+/* .login-expense { */
+  /* display: flex; */
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-color: #FFFFE0; */
+  /* text-align: center; */
+  /* justify-content: center */
+/* } */
+.login-top {
+  height: 50px;
   text-align: center;
-  justify-content: center
+  font-size: 30px;
+  background-color: palegreen;
 }
+
+.login-body {
+  display: flex;
+  text-align: center;
+  height: 100%;
+}
+
+.login-left {
+  width: 50%;
+  background-color: orange;
+}
+
+.image {
+  width: 100%;
+}
+
+.login-right {
+  width: 50%;
+  background-color: orangered;
+}
+
+.login-body-down {
+  height: 1000px;
+  background-color: palevioletred;
+}
+
+
 
 /* 支出の新規登録 */
 .new-expense {
