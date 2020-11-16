@@ -1,37 +1,62 @@
 <div class="login-expense">
 
-<%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'registration-main', local: true do |f| %>
-
-    <h1 class='form-header-text'>
-      会員情報入力
-    </h1>
-     <div class='login-flash-message'>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
-
-
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  <div class="login-top">
+    <div class="login-top-title">出費管理アプリ</div>
   </div>
 
- 
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
+  <div class="login-body">
+    <div class ="login-left">
+      <img src="/assets/image.jpg" alt="イメージ画像" class="image">
+      <p>毎日の出費を登録しよう!!</p>
     </div>
-    <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
 
+    <div class ="login-right">
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'registration-main', local: true do |f| %>
+      <h1 class='form-header-text'>
+          会員情報入力
+      </h1>
+      <div class='login-flash-message'>
+       <%= flash[:notice] %>
+       <%= flash[:alert] %>
+      </div>
 
+       <div class="form-group">
+         <div class='form-text-wrap'>
+           <label class="form-text">メールアドレス</label>
+           <span class="indispensable">必須</span>
+         </div>
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+       </div>
 
-  <div class='login-btn'>
-    <%= f.submit "ログイン" ,class:"login-red-btn" %>
-    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+       <div class='form-text-wrap'>
+          <label class="form-text">パスワード</label>
+          <span class="indispensable">必須</span>
+      </div>
+       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+
+      <div class='login-btn'>
+        <%= f.submit "ログイン" ,class:"button-type2" %>
+      </div>
+
+      <div class="to-new">
+      こちらから
+      <%= link_to '新規登録', new_user_registration_path %>
+      出来ます！
+      </div>
+      <% end %>
+    </div>
   </div>
 
-<% end %>
-</div>
+   <div class="login-body-down">
+     <div class="login-body-down-title">制作背景</div>
+     <div class="login-body-sentens">
+      転職活動のポートフォーリオとして作成しました。<br>
+      まずは、身近な事を少しでも解決出来ればと思い出費管理を題材にしました！！<br>
+      「給料日前にお金が無い」「貯金ができない」このような経験はありませんか？<br>
+      何にお金を使ったのか簡単に見れれば計画的にお金を使えるのでは？？<br>
+      このように思ったのでアプリを制作しました。
+     </div>
+   </div>
+
+
+ </div> 
