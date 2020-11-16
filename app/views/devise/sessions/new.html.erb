@@ -1,4 +1,4 @@
-<%# <div class="login-expense"> %>
+<div class="login-expense">
 
   <div class="login-top">
     <div class="login-top-title">出費管理アプリ</div>
@@ -35,16 +35,18 @@
        <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
 
       <div class='login-btn'>
-        <%= f.submit "ログイン" ,class:"login-red-btn" %>
-        <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+        <%= f.submit "ログイン" ,class:"button-type2" %>
+      </div>
+
+      <div class="to-new">
+      こちらから
+      <%= link_to '新規登録', new_user_registration_path %>
+      出来ます！
       </div>
 
       <% end %>
     </div>
   </div>
 
-  <div class="login-body-down">
-  アプリ説明
-  </div>
 
-<%# </div> %>
+ </div> 

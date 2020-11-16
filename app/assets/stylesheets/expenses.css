@@ -258,7 +258,6 @@ td{
   text-align: center;
   background-color: orange;
   align-items: center;
- 
 }
 
 .login-top-title{
@@ -274,7 +273,7 @@ td{
 }
 
 .login-left {
-  width: 50%;
+  width: 70%;
   position: relative;
 }
 
@@ -297,8 +296,21 @@ td{
 }
 
 .login-right {
-  width: 50%;
-  background-color: orangered;
+  width: 30%;
+  background-color: #FFFFE0;
+  border:2px solid orange;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.form-header-text {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.form-text-wrap{
+  margin: 20px 0;
 }
 
 .login-body-down {
@@ -306,7 +318,18 @@ td{
   background-color: palevioletred;
 }
 
+.login-btn{
+  margin-top: 20px;
+}
 
+
+.to-new {
+  margin-top: 30px;
+}
+
+.login-flash-message{
+  color: red;
+}
 
 /* 支出の新規登録 */
 .new-expense {
