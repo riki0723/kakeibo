@@ -9,7 +9,7 @@
   <div class="right-header">
     <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
+          <li><%= link_to current_user.nickname, edit_user_path(current_user) %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
        </div>
     <% else %>

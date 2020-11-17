@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :expenses, only: [:index, :new, :create, :show, :destroy, :edit, :update]
     resources :plans, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :analysis, only: [:index]
+    resources :users, only: [:edit, :update]
 end
