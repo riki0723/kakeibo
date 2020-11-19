@@ -1,1 +1,13 @@
-ユーザー
+マイページ
+<%= form_with model: current_user, local: true do |f|%>
+
+<%= f.label :nickname%>
+<%= f.text_field :nickname, autofocus: true%>
+
+<%= f.label :email%>
+<%= f.text_field :email, autofocus: true%>
+
+<%= f.submit "変更する", class: 'btn'%>
+<% end %>
+
+<%= link_to "戻る", root_path, class: 'btn'%>

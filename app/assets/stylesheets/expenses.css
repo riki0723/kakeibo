@@ -11,7 +11,7 @@
 .main-top {
   width: calc(100% - 200px);
   border-radius: 15px;
-  border : 1px solid yellow ;
+  border : 1px solid gold ;
   height: 100vh;
 }
 
@@ -21,69 +21,104 @@
 /* サイドバー、headerのCSS */
 .side-bar-header {
   height: 80px;
-  padding: 23px 40px;
-  background-color: gold;
-  border-radius: 15px;
+  background-color: #FFFFE0;
   margin : 0 0 1px 0;
-  border : 1px solid yellow ;
+  border : 2px solid gold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-logo-link {
-  text-decoration: none;
+.header-logo {
+  text-align:center
 }
 
 /* サイドバーメインのCSS */
 .link-lists {
     height: calc(100vh - 80px);
     padding: 20px 10px;
-    background-color: gold;
-    border-radius: 25px;
-    border : 1px solid yellow ;
-    
+    background-color: #FFFFE0;
+    border : 2px solid gold;
   }
+
+  .link-lists-name {
+
+    height: 30px;
+    text-align: center;
+    width: 200px;
+    font-size: 20px;
+  }
+
+  .link-lists-1  {
+    margin-top: 20px;
+  }
+
+  .link-lists-2  {
+    margin-top: 50px;
+  }
+
 
   ul {
     list-style: none;
   }
   .post {
   text-decoration: none;
+  
   }
 
 
   .show {
-    font-size: 20px;
+    font-size: 15px;
     margin: 10px 0px;
-    border-radius: 25px;
     padding :  10px ;
     justify-content: center;
     text-align: center;
-    background-color: orange;
+    background-color: rgb(247, 225, 100);
+    border:1px solid gold;
     
   }
-
- 
   
 /* メインheaderのcss */
 .main-header {
   height: 80px;
-  padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
   background-color: gold;
   border-radius: 15px 15px 0 0; 
 }
 
+.left-header {
+  width: 70%;
+  text-align: center;
+}
 .main-header-title {
   font-size: 25px;
+  margin: 19px;
+}
+
+.header-logo-link {
+  text-decoration: none;
 }
 
 .right-header{
-  margin : 0px 40px;
+  width: 30%;
+  text-align: center;
 }
+
+.main-header-logout {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px 0 0 90px;
+  width: 120px;
+  border: 1px solid orange;
+  background-color: #FFFFE0;
+  border-radius: 15px;
+}
+
 
 /* メイントップスクリーンのcss */
 .top-screen {
-  background-color: #FFFFE0;
+  background-color: #fbfbe7;
   height: calc(100vh - 80px);
 }
 
@@ -91,7 +126,6 @@
 /* トップページのcss */
 .top-top {
   height: calc(100vh - 80px);
-  
 }
 
 
@@ -127,7 +161,6 @@ h2 {
 
 .top-info-left-body1 {
   margin:0 10px 10px 10px;
-  
 }
 
 
@@ -199,8 +232,6 @@ h2 {
   
 } 
 
-
-
  tr{
   padding: 20px;
   border: solid 1px #000000; 
@@ -244,8 +275,6 @@ td{
 }
 
 /* userのログイン画面 */
-
-
 
 .login-top {
   height: 60px;
@@ -344,30 +373,29 @@ td{
 .new-expense {
   display: flex;
   width: 100%;
-  height: 100vh;
-  background-color: #FFFFE0;
   text-align: center;
   justify-content: center
+  
+  
 }
 
-.new-expense-form {
-  top: 40px;
-  margin: 50px;
-}
+
 
 .new-expense-top {
-  background-color: gold;
+  background-color: #FFFFE0;
   font-size: 30px;
   border-radius: 20px;
   margin: 5px;
+  border: orange solid 2px;
 }
 
 .new-expense-body {
   width: 600px;
   border-radius: 20px;
-  background-color: gold;
+  background-color: #FFFFE0;
   margin: 5px;
   padding: 30px;
+  border: orange solid 2px;
 }
 
 .new-expense-body-name {

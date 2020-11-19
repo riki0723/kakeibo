@@ -1,27 +1,28 @@
 <%# サイドバーのheader %>
 <div class="side-bar-header">
-
   <div class="header-logo">
-    <%=link_to '出費管理アプリ', root_path, class:"header-logo-link" %>
+    <%= current_user.nickname %>
   </div>
-
 </div>
 
-<div class="link-lists">
   
-  <ul>
+<%# サイドバーのリスト %>
+<div class="link-lists">
+  <div class="link-lists-1">
+    <div class="link-lists-name">入力リスト</div>
+      <ul>
+        <li class="show" ><%= link_to "出費を入力", new_expense_path, class: "post" %> </li>
+        <li class="show" ><%= link_to "予定を入力", new_plan_path, class: "post" %> </li>
+      </ul>
+  </div>
 
-    <li class="show" ><%= link_to "トップページ", root_path, class: "post" %> </li>
-
-    <li class="show" ><%= link_to "出費入力", new_expense_path, class: "post" %> </li>
-
-    <li class="show" ><%= link_to "カレンダー", plans_path, class: "post" %> </li>
-
-    <li class="show" ><%= link_to "出費履歴", expenses_path, class: "post" %> </li>
-
-    <li class="show" ><%= link_to "分析", analysis_index_path, class: "post" %> </li>
-
-  </ul>
-
-
+  <div class="link-lists-2">
+    <div class="link-lists-name">表示リスト</div>
+      <ul>
+        <li class="show" ><%= link_to "トップページ", root_path, class: "post" %> </li>
+        <li class="show" ><%= link_to "カレンダー", plans_path, class: "post" %> </li>
+        <li class="show" ><%= link_to "出費履歴", expenses_path, class: "post" %> </li>
+          <%# <li class="show" ><%= link_to "分析", analysis_index_path, class: "post" </li>  %>
+      </ul>
+    </div>
 </div>
