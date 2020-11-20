@@ -15,6 +15,25 @@
   height: 100vh;
 }
 
+.simple-calendar table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.simple-calendar th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.simple-calendar tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.simple-calendar td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
 /* サイドバーのCSS */
 
@@ -205,13 +224,14 @@ h2 {
 }
 
 .search_list {
-  background-color: gold;
+  background-color: #FFFFE0;
   height: 100px;
   width: 1000px;
   border-radius: 20px;
   padding-top: 8px;
   margin-bottom: 10px;
   text-align: center;
+  border: orange solid 2px;
 }
 .search_list_top{
   display: flex;
@@ -300,20 +320,51 @@ td{
   position: relative;
 }
 
-.login-left p {
+
+.balloon-right {
+  position: absolute;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: white;
+  font-size: 16px;
+  background: #ff8e9d;
+  border: solid 3px #ff8e9d;
+  box-sizing: border-box;
+  border-radius: 15px;
+  top: 35vh;
+  left: 15vw;
+}
+
+.balloon-right:before {
+  content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
-  font-family :Quicksand, sans-serif;
-  font-size: 1.5em;
-  
-  background-color: burlywood;
+  right: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-left: 12px solid #ff8e9d;
+  z-index: 2;
 }
+
+.balloon-right:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-left: 14px solid #ff8e9d;
+  z-index: 1;
+}
+
+.balloon-right p {
+  margin: 0;
+  padding: 0;
+}
+
 .image {
   width: 100%;
 }
@@ -493,8 +544,8 @@ td{
 .button-type1 {
   margin: 1px;
   padding: 8px;
-  background-color: #FFFFE0;
-  border:1px solid black;
+  background-color: gold;
+  border:1px solid orange;
   height: 40px;
   width: 130px;
   text-align:center
