@@ -41,6 +41,16 @@ RSpec.describe Expense, type: :model do
         @expense.valid?
         expect(@expense.errors.full_messages).to include("金額半角数字で入力してください")
       end
+      it "金額に半角英を入れると出費は保存できない" do
+        @expense.price = "aaa"
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("金額半角数字で入力してください")
+      end
+      it "金額に記号を入れると予定は保存できない" do
+        @expense.price = "1,000"
+        @expense.valid?
+        expect(@expense.errors.full_messages).to include("金額半角数字で入力してください")
+      end
       it "購入場所が無いと出費は保存できない" do
         @expense.wheretobuy = ""
         @expense.valid?
