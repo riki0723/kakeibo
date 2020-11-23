@@ -74,3 +74,5 @@ group :production do
 end
 
 gem 'chart-js-rails', '~> 0.1.4'
+
+gem 'pry-rails'
